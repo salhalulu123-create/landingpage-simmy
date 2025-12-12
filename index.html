@@ -6,16 +6,25 @@
     <title>Landing Page</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
+        /* Make footer stick to bottom */
+        html, body {
             height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         /* NAVBAR */
         nav {
-            background: #333;
+            background: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 15px;
             display: flex;
@@ -34,28 +43,27 @@
             color: #ddd;
         }
 
-        /* MAIN SECTION */
+        /* MAIN CONTENT AREA */
         .container {
+            flex: 1; /* pushes footer down */
             display: flex;
             max-width: 1100px;
             margin: 30px auto;
             gap: 20px;
-            min-height:100%;
-            
         }
 
-        /* LEFT CONTENT */
+        /* LEFT CONTENT BOX */
         .content {
             flex: 2;
-            background: white;
+            background: rgba(255, 255, 255, 0.85);
             padding: 25px;
             border-radius: 6px;
         }
 
-        /* REGISTER FORM - RIGHT */
+        /* RIGHT REGISTER FORM */
         .register {
             flex: 1;
-            background: white;
+            background: rgba(255, 255, 255, 0.85);
             padding: 20px;
             border-radius: 6px;
         }
@@ -83,13 +91,12 @@
             background: #555;
         }
 
-        /* FOOTER */
+        /* FOOTER ALWAYS AT BOTTOM */
         footer {
             background: #333;
             color: white;
             text-align: center;
             padding: 12px;
-            margin-top: 30px;
         }
     </style>
 </head>
@@ -104,15 +111,13 @@
         </div>
     </nav>
 
-    <!-- LANDING PAGE CONTENT -->
+    <!-- MAIN LANDING PAGE -->
     <div class="container">
 
         <!-- LEFT SIDE CONTENT -->
         <div class="content">
             <h1>Welcome to Our Landing Page</h1>
-            <p>
-                hi,it's simmy.
-            </p>
+            <p>hi, it's simmy.</p>
         </div>
 
         <!-- RIGHT SIDE REGISTER FORM -->
@@ -125,7 +130,6 @@
 
             <button>Register</button>
         </div>
-
     </div>
 
     <!-- FOOTER -->
@@ -135,8 +139,3 @@
 
 </body>
 </html>
-
-      
-        
-
-
